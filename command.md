@@ -1,5 +1,6 @@
 # https://tecadmin.net/how-to-install-opencv-on-ubuntu-20-04/
 # git \
+```
 sudo apt install \
     build-essential \
     cmake \
@@ -25,16 +26,19 @@ sudo apt install \
     libtbb-dev \
     libdc1394-22-dev \
     libopenexr-dev 
-
+```
 sudo apt-get install libopencv-core-dev
-
+```
+```
 mkdir ~/opencv_build && cd ~/opencv_build 
 git clone https://github.com/opencv/opencv.git 
 git clone https://github.com/opencv/opencv_contrib.git 
-
+```
+```
 cd ~/opencv_build/opencv 
 mkdir -p build && cd build
-
+```
+```
 cmake \
     -D CMAKE_BUILD_TYPE=RELEASE \
     -D CMAKE_INSTALL_PREFIX=/home/ubuntu/.venv/opencv_test \
@@ -53,18 +57,20 @@ cmake \
     -D OPENCV_GENERATE_PKGCONFIG=ON \
     -D OPENCV_EXTRA_MODULES_PATH=~/opencv_build/opencv_contrib/modules \
     -D INSTALL_C_EXAMPLES=ON ..
-
+```
+```
 nproc
 make -j4
 sudo make install
 pkg-config --modversion opencv4
 python -c "import cv2; print(cv2.__version__)"
-
+```
+```
 /home/ubuntu/.venv/opencv_test
 source ~/.venv/opencv_test/bin/activate
-
+```
 # -D BUILD_PERF_TESTS=OFF \
-
+```
 cmake \
     -D CMAKE_BUILD_TYPE=RELEASE \
     -D CMAKE_INSTALL_PREFIX=/home/ubuntu/.venv/opencv_test \
@@ -80,7 +86,8 @@ cmake \
     -D OPENCV_GENERATE_PKGCONFIG=ON \
     -D OPENCV_EXTRA_MODULES_PATH=~/opencv_build/opencv_contrib/modules \
     -D INSTALL_C_EXAMPLES=ON ..
-
+```
+```
 cmake \
     -D CMAKE_BUILD_TYPE=RELEASE \
     -D CMAKE_INSTALL_PREFIX=/home/ubuntu/.venv/opencv_test \
@@ -99,7 +106,7 @@ cmake \
     -D OPENCV_GENERATE_PKGCONFIG=ON \
     -D OPENCV_EXTRA_MODULES_PATH=~/opencv_build/opencv_contrib/modules \
     -D INSTALL_C_EXAMPLES=ON ..
-
+```
 
 https://www.swiftlane.com/blog/generating-mp4s-using-opencv-python-with-the-avc1-codec/
 
