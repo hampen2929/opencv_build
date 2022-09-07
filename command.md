@@ -27,6 +27,7 @@ sudo apt install \
     libdc1394-22-dev \
     libopenexr-dev 
 ```
+```
 sudo apt-get install libopencv-core-dev
 ```
 ```
